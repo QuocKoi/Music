@@ -1,0 +1,146 @@
+.spin{
+    transition: all .3s;
+    animation: spin infinite linear 2s;
+    
+    }
+    .control{
+        background-color: #120c1c;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .play,.pause{
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        margin: 0 20px;
+        line-height: 50px;
+        cursor: pointer;
+        color: white;
+        transition: all .3s;
+       
+    }
+    .next,.prev,.volume,.repeat,.random{
+        font-size: 18px;
+        background: transparent;
+        outline:none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: white;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .repeat.active ,.random.active{
+      color: #70168f;
+    }
+    .volume{
+      font-size: 16px;
+    }
+    .next:hover,.prev:hover,.volume:hover,.repeat:hover,.random:hover{
+        background-color: #393243;
+        border-radius: 50%;
+    
+    }
+    .list-song{
+      height: 200vh;
+    }
+    .item-song{
+      cursor: pointer;
+      transition: all .3s;
+      border-bottom: 1px solid #231b2e;
+    }
+    .item-song:hover {
+      background-color: #2f2739;
+    }
+    .item-song.active{
+      background-color: #2f2739;
+    }
+    .icon-music{
+      color: #76757f;
+    }
+    .region-image{
+      position: relative;
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
+    }
+    .region-image .icon-play,.region-image .sound-wave{
+      opacity: 0;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transition: all .3s;
+    }
+    .region-image .overley{
+      position: absolute;
+      transform: scale(0);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: all .3s;
+    }
+    .region-image img{
+      width: 100%;
+      height: 100%;
+    }
+    .region-image .sound-wave{
+      width: 200%;
+    }
+    .item-song:hover .icon-play,.item-song.active .sound-wave{
+      opacity: 1;
+    }
+    .item-song:hover .overley,.item-song.active .overley{
+      transform: scale(1);
+    }
+    .play:hover,.pause:hover{
+        color: #70168f;
+        border-color:#70168f !important;
+    }
+    
+      .ant-slider .ant-slider-rail{
+        background: #595560;
+      }
+      .ant-slider .ant-slider-handle{
+        visibility: hidden;
+      }
+      .ant-slider:hover .ant-slider-handle{
+        visibility: visible;
+      }
+      .ant-slider:hover .ant-slider-rail{
+        background-color: #595560!important;
+        height: 6px;
+      }
+      .ant-slider:hover .ant-slider-track{
+        height: 6px;
+      }
+      .group-volume .ant-slider .ant-slider-handle{
+        width: 10px;
+        height: 10px;
+        margin-top: -2px;
+      }
+      .group-volume .ant-slider{
+        width: 60px;
+      }
+      .control-left img{
+        width: 100px;
+        height: 100px;
+      }
+      .control-left{
+        text-align: start;
+      }
+      .control-left,.control-right{
+        flex-basis: 25%;
+      }
+      .control-middle{
+        flex-basis: 50%;
+      }
+    @keyframes spin{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
